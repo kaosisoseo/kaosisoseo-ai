@@ -6,6 +6,7 @@ import WhyChooseMe from "@/components/home/WhyChooseMe";
 import SEOProcess from "@/components/home/SEOProcess";
 import Credibility from "@/components/home/Credibility";
 import FAQ from "@/components/home/FAQ";
+import CallToAction from "@/components/home/CallToAction";
 
 export default function HomePage() {
   return (
@@ -18,6 +19,7 @@ export default function HomePage() {
       <SEOProcess />
       <Credibility />
       <FAQ />
+      <CallToAction />
     </>
   );
 }
