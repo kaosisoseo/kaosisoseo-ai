@@ -3,6 +3,7 @@ import TrustedBy from "@/components/home/TrustedBy";
 import Services from "@/components/home/Services";
 import FeaturedCaseStudies from "@/components/home/FeaturedCaseStudies";
 import WhyChooseMe from "@/components/home/WhyChooseMe";
+import SEOProcess from "@/components/home/SEOProcess";
 
 export default function HomePage() {
   return (
@@ -12,6 +13,7 @@ export default function HomePage() {
       <Services />
       <FeaturedCaseStudies />
       <WhyChooseMe />
+      <SEOProcess />
     </>
   );
 }
