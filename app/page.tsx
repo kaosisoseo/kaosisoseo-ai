@@ -4,6 +4,7 @@ import Services from "@/components/home/Services";
 import FeaturedCaseStudies from "@/components/home/FeaturedCaseStudies";
 import WhyChooseMe from "@/components/home/WhyChooseMe";
 import SEOProcess from "@/components/home/SEOProcess";
+import Credibility from "@/components/home/Credibility";
 
 export default function HomePage() {
   return (
@@ -14,6 +15,7 @@ export default function HomePage() {
       <FeaturedCaseStudies />
       <WhyChooseMe />
       <SEOProcess />
+      <Credibility />
     </>
   );
 }
