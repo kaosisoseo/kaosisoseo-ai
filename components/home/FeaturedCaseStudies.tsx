@@ -2,41 +2,42 @@ import Container from "@/components/layout/Container";
 
 const caseStudies = [
   {
-    title: "Drip Dew Funeral Home",
+    title: "Local SEO Growth for a Service Business",
+
     challenge:
-      "Build a strong online presence for a funeral home serving families in Nigeria and improve local search visibility.",
+      "A local service business had limited online visibility, making it difficult for potential customers to discover its services through Google Search.",
 
     strategy:
-      "Implemented technical SEO, local SEO, structured content, Google Business Profile optimization and website improvements to strengthen search performance.",
+      "Implemented a comprehensive SEO strategy that included technical SEO, local SEO, Google Business Profile optimization, structured content, on-page optimization, and website improvements to strengthen search performance.",
 
     result:
-      "Established a solid local SEO foundation, improved discoverability in Google Search and positioned the business for long-term organic growth.",
+      "Built a strong local search presence, improved Google visibility, increased qualified organic traffic, and established a sustainable foundation for long-term organic growth.",
   },
 
   {
-    title: "AI Visibility for a Funeral Home",
+    title: "AI Visibility Optimization",
 
     challenge:
-      "Help a funeral home become visible not only in Google Search but also in AI assistants such as ChatGPT and Grok.",
+      "Explore how a local business could become visible not only in Google Search but also in AI assistants such as ChatGPT, Gemini, Claude, and Grok.",
 
     strategy:
-      "Applied entity-focused SEO, topical authority, structured website content, consistent business information and trust signals to improve how AI systems understand and reference the business.",
+      "Applied entity-focused SEO, topical authority, structured content, consistent business information, schema markup, and trust signals to improve how AI systems understand and recommend the business.",
 
     result:
-      "The funeral home began appearing in relevant responses from ChatGPT and Grok. The experience also led to publishing a LinkedIn article explaining how AI assistants recommend businesses beyond traditional Google rankings.",
+      "Successfully improved the business's visibility in AI-generated recommendations. The project also inspired a LinkedIn article explaining how businesses can optimize for AI search and recommendation systems beyond traditional Google rankings.",
   },
 
   {
-    title: "Local SEO Growth Framework",
+    title: "SEO & AI Visibility Framework",
 
     challenge:
-      "Create a repeatable SEO process that can be applied across different local businesses.",
+      "Develop a repeatable SEO methodology that delivers consistent results for local businesses while preparing them for the future of AI-powered search.",
 
     strategy:
-      "Combined technical SEO, local search optimization, content strategy, entity development and AI visibility techniques into one structured framework.",
+      "Created a structured framework combining technical SEO, local SEO, content strategy, entity optimization, and AI Visibility techniques into a single scalable process.",
 
     result:
-      "This framework now serves as the foundation for every SEO project, helping businesses build sustainable visibility across both search engines and AI platforms.",
+      "The framework now serves as the foundation of every SEO engagement, helping businesses improve search rankings while increasing their visibility across Google and modern AI assistants.",
   },
 ];
 

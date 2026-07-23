@@ -20,10 +20,9 @@ const faqs = [
       "AI Visibility focuses on helping businesses become understandable and recommendable by AI assistants such as ChatGPT, Gemini, Claude, Grok and Perplexity through entity optimization, structured content and authoritative online signals.",
   },
   {
-    question: "Do you work with businesses outside Nigeria?",
-    answer:
-      "Yes. I work remotely with businesses, organizations and agencies worldwide using online meetings and collaborative project management tools.",
-  },
+  question: "Do you work with businesses globally?",
+  answer: "Yes. I work with businesses, agencies, and organizations worldwide through remote collaboration. Whether you're looking to improve your Google rankings, strengthen your local search presence, or increase your visibility in AI search platforms like ChatGPT, Gemini, Claude, and Grok, I can help regardless of your location.",
+},
   {
     question: "How much do your SEO services cost?",
     answer:
