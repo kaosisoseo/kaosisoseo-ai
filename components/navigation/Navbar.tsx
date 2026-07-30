@@ -18,6 +18,8 @@ export default function Navbar() {
             <Link href="/services">Services</Link>
 
             <Link href="/case-studies">Case Studies</Link>
+            
+            <Link href="/resources">Resources</Link>
 
             <Link href="/blog">Blog</Link>
 
