@@ -18,6 +18,9 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://kaosisoseo-ai.vercel.app"),
+  verification: {
+  google: "GDFDByIo85cCxwJ3T43Cw-088r-wljgmuSu25Sz8-58",
+},
 
   title: {
     default: "Kaosiso Ezebuenyi | SEO & AI Visibility Strategist",
