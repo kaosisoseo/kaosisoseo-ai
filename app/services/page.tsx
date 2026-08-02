@@ -1,6 +1,7 @@
 import Script from "next/script";
 import Container from "@/components/layout/Container";
 import ServicesCTA from "@/components/services/ServicesCTA";
+import { generateBreadcrumbSchema } from "@/lib/breadcrumb";
 
 const services = [
   {
@@ -109,6 +110,17 @@ const serviceSchema = services.map((service) => ({
   url: "https://kaosisoseo-ai.vercel.app/services",
 }));
 
+const breadcrumbSchema = generateBreadcrumbSchema([
+  {
+    name: "Home",
+    url: "https://kaosisoseo-ai.vercel.app",
+  },
+  {
+    name: "Services",
+    url: "https://kaosisoseo-ai.vercel.app/services",
+  },
+]);
+
 export default function ServicesPage() {
   return (
     <>
@@ -117,6 +129,14 @@ export default function ServicesPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(serviceSchema),
+        }}
+      />
+
+      <Script
+        id="breadcrumb-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbSchema),
         }}
       />
 
