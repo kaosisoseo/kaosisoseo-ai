@@ -1,3 +1,4 @@
+import Script from "next/script";
 import Container from "@/components/layout/Container";
 import ServicesCTA from "@/components/services/ServicesCTA";
 
@@ -29,7 +30,7 @@ const services = [
   {
     title: "AI Visibility",
     description:
-      "Optimize your website so businesses can become discoverable inside AI assistants such as ChatGPT, Google AI Overviews, Grok and other emerging AI search platforms.",
+      "Optimize your website so businesses can become discoverable inside AI assistants such as ChatGPT, Google AI Overviews, Gemini, Claude, Grok and other emerging AI search platforms.",
     deliverables: [
       "Entity Optimization",
       "Topical Authority",
@@ -74,11 +75,51 @@ const services = [
       "Content Optimization",
     ],
   },
+  {
+    title: "E-commerce SEO",
+    description:
+      "Optimize online stores for higher organic visibility, improved product rankings, category page performance and increased revenue from search.",
+    deliverables: [
+      "Product Page SEO",
+      "Category Page Optimization",
+      "Technical E-commerce SEO",
+      "Structured Product Schema",
+      "Conversion Optimization",
+    ],
+  },
 ];
+
+const serviceSchema = services.map((service) => ({
+  "@context": "https://schema.org",
+  "@type": "Service",
+
+  name: service.title,
+
+  description: service.description,
+
+  provider: {
+    "@id": "https://kaosisoseo-ai.vercel.app/#person",
+  },
+
+  areaServed: {
+    "@type": "AdministrativeArea",
+    name: "Worldwide",
+  },
+
+  url: "https://kaosisoseo-ai.vercel.app/services",
+}));
 
 export default function ServicesPage() {
   return (
     <>
+      <Script
+        id="services-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(serviceSchema),
+        }}
+      />
+
       <section className="bg-gray-50 py-24">
         <Container>
           <div className="max-w-3xl">
@@ -151,7 +192,7 @@ export default function ServicesPage() {
         </Container>
       </section>
 
-      <ServicesCTA/>
+      <ServicesCTA />
     </>
   );
 }

@@ -16,6 +16,10 @@ export const personSchema = {
   description:
     "Helping businesses rank on Google and become recommended by AI assistants through Technical SEO, Local SEO, GEO and AEO.",
 
+  worksFor: {
+    "@id": "https://kaosisoseo-ai.vercel.app/#website"
+  },
+
   knowsAbout: [
     "Technical SEO",
     "Local SEO",
@@ -26,11 +30,17 @@ export const personSchema = {
     "Google Search",
     "ChatGPT Optimization",
     "SEO Audits",
-    "Content Strategy"
+    "Content Strategy",
+    "Core Web Vitals",
+    "Google Business Profile",
+    "Structured Data",
+    "Content Strategy",
+    "Website Design"
   ],
 
   sameAs: [
-    "https://www.linkedin.com/in/kaosiso-ezebuenyi/"
+    "https://www.linkedin.com/in/kaosiso-ezebuenyi/",
+    "https://github.com/kaosisoseo"
   ]
 };
 
@@ -48,9 +58,13 @@ export const websiteSchema = {
   description:
     "Helping businesses rank on Google and become recommended by AI assistants through Technical SEO, Local SEO, GEO and AEO.",
 
+  inLanguage: "en",
+
   publisher: {
     "@id": "https://kaosisoseo-ai.vercel.app/#person"
   },
 
-  inLanguage: "en"
+  creator: {
+    "@id": "https://kaosisoseo-ai.vercel.app/#person"
+  }
 };
