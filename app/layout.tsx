@@ -4,6 +4,8 @@ import "./globals.css";
 
 import Navbar from "@/components/navigation/Navbar";
 import Footer from "@/components/layout/Footer";
+import { personSchema, websiteSchema } from "@/lib/schema";
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -15,12 +17,87 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://kaosisoseo-ai.vercel.app"),
+
   title: {
-    default: "Kaosiso Ezebuenyi SEO",
+    default: "Kaosiso Ezebuenyi | SEO & AI Visibility Strategist",
     template: "%s | Kaosiso SEO",
   },
+
   description:
-    "Helping businesses rank on Google and become recommended by AI assistants through Technical SEO, Local SEO, GEO and AEO.",
+    "Helping businesses rank on Google and become recommended by ChatGPT, Gemini, Claude, Perplexity and AI search through Technical SEO, Local SEO, GEO and AEO.",
+
+  keywords: [
+    "SEO Consultant",
+    "Technical SEO",
+    "Local SEO",
+    "AI SEO",
+    "AI Visibility",
+    "Answer Engine Optimization",
+    "Generative Engine Optimization",
+    "SEO Audit",
+    "Google Rankings",
+    "ChatGPT SEO",
+    "LLM SEO",
+    "Entity SEO",
+  ],
+
+  authors: [
+    {
+      name: "Kaosiso Ezebuenyi",
+    },
+  ],
+
+  creator: "Kaosiso Ezebuenyi",
+
+  publisher: "Kaosiso SEO",
+
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-video-preview": -1,
+      "max-snippet": -1,
+    },
+  },
+
+  openGraph: {
+    title: "Kaosiso Ezebuenyi | SEO & AI Visibility Strategist",
+
+    description:
+      "Helping businesses rank on Google and become recommended by AI assistants.",
+
+    url: "https://kaosisoseo-ai.vercel.app",
+
+    siteName: "Kaosiso SEO",
+
+    locale: "en_US",
+
+    type: "website",
+
+    images: [
+      {
+        url: "/images/profile/kaosiso.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "Kaosiso Ezebuenyi",
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+
+    title: "Kaosiso Ezebuenyi | SEO & AI Visibility Strategist",
+
+    description:
+      "Helping businesses rank on Google and become recommended by AI assistants.",
+
+    images: ["/images/profile/kaosiso.jpeg"],
+  },
 };
 
 export default function RootLayout({
@@ -30,19 +107,33 @@ export default function RootLayout({
 }>) {
   return (
     <html
-  lang="en"
-  data-scroll-behavior="smooth"
-  className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      lang="en"
+      data-scroll-behavior="smooth"
+      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-  <Navbar />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(personSchema),
+          }}
+        />
 
-  <main className="flex-1">
-    {children}
-  </main>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(websiteSchema),
+          }}
+        />
 
-  <Footer />
-</body>
+        <Navbar />
+
+        <main className="flex-1">
+          {children}
+        </main>
+
+        <Footer />
+      </body>
     </html>
   );
 }
