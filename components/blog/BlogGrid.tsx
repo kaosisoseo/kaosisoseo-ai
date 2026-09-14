@@ -3,6 +3,12 @@ import Link from "next/link";
 
 const posts = [
   {
+    title: "Is Google Search Console Data Wrong? I Investigated the Numbers",
+    excerpt:
+      "I investigated why Google Search Console data can differ from GA4, manual rankings, query reports and indexing data.",
+    href: "/blog/is-google-search-console-data-wrong",
+  },
+  {
     title: "Google Ranks Websites. AI Recommends Businesses.",
     excerpt:
       "Why modern SEO is no longer just about rankings and how AI search is changing online visibility.",
