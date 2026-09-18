@@ -23,7 +23,7 @@ export default function Hero() {
 
             <p className="mt-8 max-w-2xl text-xl leading-9 text-gray-600">
               I help businesses increase their online visibility through
-              Technical SEO, Local SEO and AI Visibility Optimization—so they
+              Technical SEO, Local SEO and AI Visibility Optimization, so they
               rank higher on Google, attract qualified customers, and become
               the businesses AI assistants recommend.
             </p>
@@ -52,11 +52,11 @@ export default function Hero() {
 
               <div className="rounded-xl border border-gray-200 p-5">
                 <h3 className="text-3xl font-bold text-green-600">
-                  7+
+                  5+
                 </h3>
 
                 <p className="mt-2 text-gray-600">
-                  Years Experience
+                  Years Marketing Experience
                 </p>
               </div>
 
