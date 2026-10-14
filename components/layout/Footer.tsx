@@ -84,6 +84,36 @@ export default function Footer() {
 
               <li>
                 <a
+                  href="https://youtube.com/@kaosiso_seo"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  YouTube
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="https://instagram.com/kaosiso_seo"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Instagram
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="https://www.tiktok.com/@kaosiso_seo"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  TikTok
+                </a>
+              </li>
+
+              <li>
+                <a
                   href="https://medium.com/@ezebuenyikaosiso"
                   target="_blank"
                   rel="noopener noreferrer"
