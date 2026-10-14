@@ -40,7 +40,11 @@ export const personSchema = {
 
   sameAs: [
     "https://www.linkedin.com/in/kaosiso-ezebuenyi/",
-    "https://github.com/kaosisoseo"
+    "https://github.com/kaosisoseo",
+    "https://youtube.com/@kaosiso_seo",
+    "https://instagram.com/kaosiso_seo",
+    "https://www.tiktok.com/@kaosiso_seo",
+    "https://x.com/EzebuenyiK"
   ]
 };
 
