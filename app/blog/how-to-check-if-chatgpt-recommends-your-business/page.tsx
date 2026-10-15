@@ -14,7 +14,7 @@ export const metadata = {
     description:
       "Check AI visibility, identify competitors and find practical ways to improve your business's discoverability.",
     type: "article",
-    images: ["/images/kaosisoseo-ai-visibility-infographic.webp"],
+    images: ["/images/kaosisoseo-ai-visibility-infographic.webp.png."],
   },
 };
 
