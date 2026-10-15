@@ -40,7 +40,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 0.9,
     },
-
     {
       url: `${baseUrl}/blog/is-google-search-console-data-wrong`,
       lastModified: new Date(),
@@ -65,7 +64,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.8,
     },
-
+    {
+      url: `${baseUrl}/blog/how-to-check-if-chatgpt-recommends-your-business`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
     {
       url: `${baseUrl}/contact`,
       lastModified: new Date(),
