@@ -3,6 +3,12 @@ import Link from "next/link";
 
 const posts = [
   {
+    title: "How to Check if ChatGPT Recommends Your Business (Before a Competitor Takes the Customer)",
+    excerpt:
+      "Learn how to test whether ChatGPT and other AI search tools recommend your business, and spot visibility gaps before potential customers choose a competitor.",
+    href: "/blog/how-to-check-if-chatgpt-recommends-your-business",
+  },
+  {
     title: "Is Google Search Console Data Wrong? I Investigated the Numbers",
     excerpt:
       "I investigated why Google Search Console data can differ from GA4, manual rankings, query reports and indexing data.",
