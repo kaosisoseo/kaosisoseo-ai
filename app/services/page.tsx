@@ -1,124 +1,40 @@
+import type { Metadata } from "next";
+import Link from "next/link";
 import Script from "next/script";
 import Container from "@/components/layout/Container";
 import ServicesCTA from "@/components/services/ServicesCTA";
 import { generateBreadcrumbSchema } from "@/lib/breadcrumb";
+import { services } from "@/lib/service-content";
 
-const services = [
-  {
-    title: "Technical SEO",
-    description:
-      "Improve crawlability, indexing, Core Web Vitals, site architecture, structured data, XML sitemaps and technical performance so search engines can understand your website.",
-    deliverables: [
-      "Technical SEO Audit",
-      "Core Web Vitals",
-      "Schema Markup",
-      "Site Architecture",
-      "Indexing & Crawl Optimization",
-    ],
+const siteUrl = "https://kaosisoseo-ai.vercel.app";
+
+export const metadata: Metadata = {
+  title: "SEO Services, Local SEO & AI Search Visibility",
+  description: "Explore SEO services from Kaosiso Ezebuenyi, including AI search visibility, Local SEO, technical SEO, content optimization, SEO-focused websites, and SEO audits.",
+  alternates: { canonical: `${siteUrl}/services` },
+  openGraph: {
+    title: "SEO Services | Kaosiso SEO",
+    description: "Practical SEO, local search, and AI visibility services for businesses.",
+    url: `${siteUrl}/services`,
+    type: "website",
   },
-  {
-    title: "Local SEO",
-    description:
-      "Increase your visibility in Google Search and Google Maps through local optimization strategies that help nearby customers discover your business.",
-    deliverables: [
-      "Google Business Profile",
-      "Local Citations",
-      "Location Pages",
-      "Review Strategy",
-      "Local Keyword Research",
-    ],
-  },
-  {
-    title: "AI Visibility",
-    description:
-      "Optimize your website so businesses can become discoverable inside AI assistants such as ChatGPT, Google AI Overviews, Gemini, Claude, Grok and other emerging AI search platforms.",
-    deliverables: [
-      "Entity Optimization",
-      "Topical Authority",
-      "Structured Content",
-      "Knowledge Reinforcement",
-      "AI Search Optimization",
-    ],
-  },
-  {
-    title: "SEO Audits",
-    description:
-      "Receive a comprehensive audit identifying technical issues, content opportunities, keyword gaps and growth recommendations.",
-    deliverables: [
-      "Technical Audit",
-      "Content Audit",
-      "Competitor Analysis",
-      "Keyword Gap Analysis",
-      "Priority Action Plan",
-    ],
-  },
-  {
-    title: "Website Design",
-    description:
-      "Build modern, SEO-friendly websites that are fast, responsive and optimized for search engines from day one.",
-    deliverables: [
-      "Responsive Design",
-      "Performance Optimization",
-      "SEO Foundations",
-      "Conversion Focus",
-      "Accessibility",
-    ],
-  },
-  {
-    title: "Content Strategy",
-    description:
-      "Develop content that builds topical authority, answers user intent and supports long-term organic growth.",
-    deliverables: [
-      "Keyword Research",
-      "Content Planning",
-      "SEO Copywriting",
-      "Internal Linking",
-      "Content Optimization",
-    ],
-  },
-  {
-    title: "E-commerce SEO",
-    description:
-      "Optimize online stores for higher organic visibility, improved product rankings, category page performance and increased revenue from search.",
-    deliverables: [
-      "Product Page SEO",
-      "Category Page Optimization",
-      "Technical E-commerce SEO",
-      "Structured Product Schema",
-      "Conversion Optimization",
-    ],
-  },
-];
+};
 
 const serviceSchema = services.map((service) => ({
   "@context": "https://schema.org",
   "@type": "Service",
-
+  "@id": `${siteUrl}/services/${service.slug}#service`,
   name: service.title,
-
-  description: service.description,
-
-  provider: {
-    "@id": "https://kaosisoseo-ai.vercel.app/#person",
-  },
-
-  areaServed: {
-    "@type": "AdministrativeArea",
-    name: "Worldwide",
-  },
-
-  url: "https://kaosisoseo-ai.vercel.app/services",
+  serviceType: service.title,
+  description: service.metaDescription,
+  provider: { "@id": `${siteUrl}/#person` },
+  areaServed: "Worldwide",
+  url: `${siteUrl}/services/${service.slug}`,
 }));
 
 const breadcrumbSchema = generateBreadcrumbSchema([
-  {
-    name: "Home",
-    url: "https://kaosisoseo-ai.vercel.app",
-  },
-  {
-    name: "Services",
-    url: "https://kaosisoseo-ai.vercel.app/services",
-  },
+  { name: "Home", url: siteUrl },
+  { name: "Services", url: `${siteUrl}/services` },
 ]);
 
 export default function ServicesPage() {
@@ -127,87 +43,87 @@ export default function ServicesPage() {
       <Script
         id="services-schema"
         type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(serviceSchema),
-        }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema).replace(/</g, "\\u003c") }}
       />
-
       <Script
-        id="breadcrumb-schema"
+        id="services-breadcrumb-schema"
         type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(breadcrumbSchema),
-        }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema).replace(/</g, "\\u003c") }}
       />
 
-      <section className="bg-gray-50 py-24">
+      <section className="bg-gray-950 py-20 text-white sm:py-28">
         <Container>
-          <div className="max-w-3xl">
-            <span className="text-sm font-semibold uppercase tracking-widest text-green-600">
-              Services
-            </span>
-
-            <h1 className="mt-4 text-5xl font-bold tracking-tight text-gray-900">
-              SEO Strategies That Drive Sustainable Growth
-            </h1>
-
-            <p className="mt-6 text-xl leading-8 text-gray-600">
-              Every business is different. My approach combines Technical SEO,
-              Local SEO and AI Visibility strategies to improve search
-              performance while building long-term authority across both Google
-              and AI-powered search experiences.
+          <div className="max-w-4xl">
+            <p className="text-sm font-bold uppercase tracking-[0.2em] text-green-400">
+              SEO Services · Kaosiso_SEO
             </p>
+            <h1 className="mt-5 text-4xl font-extrabold leading-tight tracking-tight sm:text-5xl lg:text-6xl">
+              Get found on search. Build visibility that supports your business.
+            </h1>
+            <p className="mt-6 max-w-3xl text-lg leading-8 text-gray-300 sm:text-xl">
+              I’m Kaosiso Ezebuenyi, an Organic Search and AI Visibility Specialist. I help businesses improve their presence on Google, Google Maps, and AI-powered search through focused SEO work built around their goals.
+            </p>
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+              <a href="https://cal.com/ezebuenyik/30min" target="_blank" rel="noopener noreferrer" className="inline-flex min-h-12 items-center justify-center rounded-xl bg-green-600 px-6 py-3 font-semibold text-white transition hover:bg-green-700">
+                Book a Strategy Call
+              </a>
+              <Link href="/case-studies" className="inline-flex min-h-12 items-center justify-center rounded-xl border border-white/30 px-6 py-3 font-semibold text-white transition hover:bg-white/10">
+                View Case Studies
+              </Link>
+            </div>
           </div>
         </Container>
       </section>
 
-      <section className="py-20">
+      <section className="py-16 sm:py-20">
         <Container>
-          <div className="grid gap-8 md:grid-cols-2">
-            {services.map((service) => (
-              <div
-                key={service.title}
-                className="rounded-2xl border border-gray-200 bg-white p-8 shadow-sm transition hover:shadow-lg"
-              >
-                <h2 className="text-2xl font-bold text-gray-900">
-                  {service.title}
-                </h2>
+          <div className="max-w-3xl">
+            <p className="text-sm font-bold uppercase tracking-[0.18em] text-green-700">Services</p>
+            <h2 className="mt-3 text-3xl font-bold tracking-tight text-gray-950 sm:text-4xl">
+              Choose the support your business needs
+            </h2>
+            <p className="mt-4 leading-7 text-gray-600">
+              Every business starts from a different place. Explore each service to understand the work involved, how we would approach it, and the engagement options available.
+            </p>
+          </div>
 
-                <p className="mt-4 leading-7 text-gray-600">
-                  {service.description}
-                </p>
-
-                <ul className="mt-6 space-y-3">
-                  {service.deliverables.map((item) => (
-                    <li
-                      key={item}
-                      className="flex items-center gap-3 text-gray-700"
-                    >
-                      <span className="text-green-600">✓</span>
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
+          <div className="mt-9 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {services.map((service, index) => (
+              <article key={service.slug} className="flex h-full flex-col rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:border-green-300 hover:shadow-lg">
+                <p className="text-sm font-bold text-green-700">0{index + 1}</p>
+                <h3 className="mt-3 text-xl font-bold text-gray-950">{service.title}</h3>
+                <p className="mt-3 flex-1 leading-7 text-gray-600">{service.intro}</p>
+                <Link href={`/services/${service.slug}`} className="mt-6 inline-flex items-center gap-2 font-semibold text-green-800 hover:text-green-950">
+                  Explore service <span aria-hidden="true">→</span>
+                </Link>
+              </article>
             ))}
           </div>
         </Container>
       </section>
 
-      <section className="bg-gray-50 py-24">
+      <section className="bg-gray-50 py-16 sm:py-20">
         <Container>
           <div className="mx-auto max-w-3xl text-center">
-            <h2 className="text-4xl font-bold text-gray-900">
-              Why Work With Kaosiso SEO?
+            <p className="text-sm font-bold uppercase tracking-[0.18em] text-green-700">How I work</p>
+            <h2 className="mt-3 text-3xl font-bold tracking-tight text-gray-950 sm:text-4xl">
+              Clear priorities, practical implementation, honest reporting
             </h2>
-
-            <p className="mt-6 text-lg leading-8 text-gray-600">
-              My work focuses on building sustainable organic visibility rather
-              than chasing short-term ranking gains. Every strategy is designed
-              to strengthen your website's technical foundation, improve search
-              performance and increase visibility across both traditional search
-              engines and AI-powered search experiences.
+            <p className="mt-5 text-lg leading-8 text-gray-600">
+              I focus on understanding your current position, finding the most useful opportunities, and agreeing on a realistic plan. I do not promise guaranteed rankings or AI recommendations. The work is tailored to your business, market, and goals.
             </p>
+          </div>
+          <div className="mt-9 grid gap-5 md:grid-cols-3">
+            {[
+              { title: "One-time projects", text: "Get focused help with an audit, profile optimization, content improvement, or another defined SEO task." },
+              { title: "Monthly support", text: "Continue with agreed implementation, monitoring, refinement, and reporting over time." },
+              { title: "Negotiable pricing", text: "Pricing depends on scope, competition, site needs, and ongoing support. Deliverables are agreed before work starts." }
+            ].map((item) => (
+              <div key={item.title} className="rounded-2xl border border-gray-200 bg-white p-6">
+                <h3 className="text-lg font-bold text-gray-950">{item.title}</h3>
+                <p className="mt-3 leading-7 text-gray-600">{item.text}</p>
+              </div>
+            ))}
           </div>
         </Container>
       </section>
