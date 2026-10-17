@@ -41,15 +41,15 @@ export async function generateMetadata({
   };
 }
 
-function SectionHeading({ eyebrow, title }: { eyebrow?: string; title: string }) {
+function SectionHeading({ eyebrow, title, dark = false }: { eyebrow?: string; title: string; dark?: boolean }) {
   return (
     <div className="max-w-3xl">
       {eyebrow && (
-        <p className="text-sm font-semibold uppercase tracking-[0.18em] text-green-700">
+        <p className={`text-sm font-semibold uppercase tracking-[0.18em] ${dark ? "text-green-300" : "text-green-700"}`}>
           {eyebrow}
         </p>
       )}
-      <h2 className="mt-3 text-3xl font-bold tracking-tight text-gray-950 sm:text-4xl">
+      <h2 className={`mt-3 text-3xl font-bold tracking-tight sm:text-4xl ${dark ? "text-white" : "text-gray-950"}`}>
         {title}
       </h2>
     </div>
@@ -209,7 +209,7 @@ export default async function ServiceDetailPage({
 
       <section className="bg-gray-950 py-16 text-white sm:py-20">
         <Container>
-          <SectionHeading eyebrow="How we work" title="A straightforward process" />
+          <SectionHeading eyebrow="How we work" title="A straightforward process" dark />
           <div className="mt-9 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {service.process.map((step, index) => (
               <article key={step.title} className="rounded-2xl border border-white/15 bg-white/[0.04] p-6">
