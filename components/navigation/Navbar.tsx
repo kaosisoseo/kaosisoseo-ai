@@ -37,7 +37,8 @@ export default function Navbar() {
   };
 
   useEffect(() => {
-    closeMenu();
+    setMobileMenuOpen(false);
+    setMobileServicesOpen(false);
     setDesktopServicesOpen(false);
   }, [pathname]);
 
